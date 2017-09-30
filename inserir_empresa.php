@@ -17,6 +17,8 @@ if (empty($_POST) && array_key_exists('id', $_GET)) {
 	$empresa = new Empresa;
 	$empresa->atualizar($_POST);
 } if (!empty($_POST) && !array_key_exists('id', $_GET)) {
+	$empresa = new Empresa;
+	$empresa->inserir($_POST);
 }
 
 ?>
